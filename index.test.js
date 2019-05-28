@@ -2,7 +2,7 @@ let { expect } = require('chai'),
   should = require('chai').should(),
   _ = require('lodash')
 
-const { alwaysTrue, legitString } = require('./index')
+const { alwaysTrue, legitString, errorLegitString } = require('./index')
 
 describe('#mocha basics', () => {
   it('true should be true', () => {
@@ -53,3 +53,21 @@ describe('#legitString', () => {
     expect(legitString(null)).to.be.false
   })
 })
+
+// describe('#errorLegitString', () => {
+//   it('cow should be a string', () => {
+//     errorLegitString('cow').should.be.true
+//   })
+
+//   it('"" should not be a string', () => {
+//     expect(errorLegitString('')).to.be.false
+//   })
+
+//   it('undefined should not be a string', () => {
+//     expect(errorLegitString(undefined)).to.be.false
+//   })
+
+//   it('null should not be a string', () => {
+//     expect(errorLegitString(null)).to.be.false
+//   })
+// })
